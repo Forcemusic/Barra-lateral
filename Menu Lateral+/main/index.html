@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Sidebar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"  rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <aside class="sidebar" aria-labelledby="sidebar-title">
+        <form action="" class="sidebar__form" aria-label="Menu Form">
+            <input type="checkbox" id="open-menu" aria-label="Open Menu"> 
+            <label class="material-symbols-outlined" for="open-menu" aria-label="Close Menu">close</label>
+            <label class="material-symbols-outlined open-button" for="open-menu" aria-label="Open Menu">double_arrow</label>
+        </form>
+        <picture class="sidebar__picture">
+            <source media="(max-width: 57.5rem)" srcset="../img/logosmall.png">
+            <img src="../img/logo.png" alt="Logo de la página">
+        </picture>
+        <nav class="sidebar__nav" aria-label="Main Navigation">
+            <ul>
+                <li class="sidebar__item">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <a href="#" aria-label="View Notifications">Notifications</a>
+                </li>
+                <li class="sidebar__item">
+                    <span class="material-symbols-outlined">mail</span>
+                    <a href="#" aria-label="View Messages">Message</a>
+                </li>
+                <li class="sidebar__item">
+                    <span class="material-symbols-outlined">shopping_cart_checkout</span>
+                    <a href="#" aria-label="View Cart">Cart</a>
+                </li>
+                <li class="sidebar__item">
+                    <span class="material-symbols-outlined">account_balance</span>
+                    <a href="#" aria-label="View Balance">Balance</a>
+                </li>
+                <li class="sidebar__item">
+                    <span class="material-symbols-outlined">settings</span>
+                    <a href="#" aria-label="View Settings">Settings</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar__profile profile">
+            <ul>
+                <li class="sidebar__item item-profile">
+                    <img src="../img/ForceM.png" alt="Imagen de usuario.">
+                    <span class="profile-option">PROFILE</span>
+                </li>
+                <li class="sidebar__item">
+                    <span class="material-symbols-outlined">logout</span>
+                    <a href="#" aria-label="Log Out">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script>
+        const checkbox = document.getElementById('open-menu');
+        const sidebar = document.querySelector('.sidebar');
+
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                sidebar.classList.add('open');
+            } else {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+    <main>
+        
+    </main>
+</body>
+</html>
